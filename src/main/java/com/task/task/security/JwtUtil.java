@@ -14,8 +14,8 @@ import java.util.function.Function;
 
 @Component
 public class JwtUtil {
-    @Value("${jwt.secret}") private String secret;
-    @Value("${jwt.expiration}") private long expiration;
+    @Value("${app.jwt.secret}") private String secret;
+    @Value("${app.jwt.expiration}") private long expiration;
 
     public String generateToken(UserDetails userDetails) {
         return generateToken(new HashMap<>(), userDetails);
